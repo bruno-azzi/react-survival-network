@@ -62,16 +62,13 @@ main {
     padding: 20px 25px;
   }
 
-  .column-title {
+  .title {
     background: $blue-light;
     border-radius: 5px 5px 0 0;
     padding: 12px 15px;
-
-    .title {
-      font-weight: 400;
-      text-transform: uppercase;
-      margin: 0;
-    }
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 0;
   }
 
   .add-btn {
@@ -88,6 +85,34 @@ main {
 
       path {
         fill: $white;
+      }
+    }
+  }
+
+  [data-component='global-data'] {
+    margin: 20px 0 0;
+  }
+
+  .page-tabs {
+    background: $blue-light;
+    color: $white;
+    box-shadow: none;
+
+    .MuiTabs-flexContainer {
+      justify-content: space-between;
+
+      .MuiTab-root {
+        width: 50%;
+        border-radius: 3px;
+        min-height: auto;
+
+        &.MuiTab-textColorInherit {
+          opacity: .5;
+        }
+
+        &.MuiTab-textColorInherit.Mui-selected {
+          opacity: 1;
+        }
       }
     }
   }

@@ -145,7 +145,7 @@ export default function AddSurvivorForm(props) {
   return (
     <form data-component='add-survivor-form' onSubmit={addSurvivor}>
       <Grid container spacing={4} alignItems="center">
-        <Grid item xs={8}>
+        <Grid item md={8}>
           <TextField
             className='input-field'
             required
@@ -158,7 +158,7 @@ export default function AddSurvivorForm(props) {
           />
         </Grid>
 
-        <Grid item xs={4}>
+        <Grid item md={4}>
           <TextField
             className='input-field'
             required
@@ -175,7 +175,7 @@ export default function AddSurvivorForm(props) {
           />
         </Grid>
 
-        <Grid item xs={4}>
+        <Grid item md={4}>
           <label>Gender</label>
           <RadioGroup aria-label='gender'>
             <Grid container>
@@ -201,7 +201,7 @@ export default function AddSurvivorForm(props) {
           </RadioGroup>
         </Grid>
 
-        <Grid item xs={8}>
+        <Grid item md={8}>
           <TextField
             className='input-field'
             required
@@ -221,7 +221,7 @@ export default function AddSurvivorForm(props) {
       <Grid container justify="space-between" className="inventory">
         {
           inventory.map(item => (
-            <Grid xs={3} item className='item' key={item.name}>
+            <Grid xs={6} md={3} item className='item' key={item.name}>
               <img className='item-icon' src={item.icon} alt={item.name} title={item.name} />
 
               <div className="field-holder">

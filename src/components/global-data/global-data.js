@@ -29,7 +29,7 @@ export default function GlobalData() {
     }
 
     loadGlobalData();
-  }, []);
+  }, [globalData]);
 
   return (
     <div data-component='global-data'>
