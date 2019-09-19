@@ -1,0 +1,30 @@
+@import '../../assets/scss/imports.scss';
+
+[data-component='survivor-list'] {
+  padding: 12px 15px;
+  overflow: hidden;
+
+  .grid-item {
+    padding: 8px 0;
+  }
+
+  .survivor {
+    position: relative;
+    left: -100%;
+    opacity: 0;
+    cursor: pointer;
+    border-radius: 5px;
+    border-bottom: 1px solid $blue-light;
+    margin: 0 0 8px;
+  
+    .name {
+      font-weight: 300;
+      margin: 0;
+    }
+  
+    .infected-label {
+      color: $red;
+    }
+  }
+
+}

@@ -1,0 +1,26 @@
+@import 'imports';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: $main-font !important;
+}
+
+html, body, main, #root {
+  height: 100%;
+  overflow-x: hidden; 
+  background: $blue-dark;
+  font-family: $main-font !important;
+  color: $white;
+}
+
+input,
+button {
+  background: none;
+  border: 1px solid $grey;
+  outline: none !important;
+  font-family: $main-font !important;
+}
+

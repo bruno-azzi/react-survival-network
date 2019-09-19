@@ -1,0 +1,86 @@
+@import '../../assets/scss/imports.scss';
+
+[data-component='add-survivor-form'] {
+  color: $form-grey;
+
+  .add-survivor-btn {
+    margin: 35px auto 10px;
+    display: block;
+    width: 120px;
+  } 
+
+  input {
+    color: $form-grey;
+
+    &::placeholder {
+      color: $form-grey; 
+    }
+
+    & + fieldset {
+      border-color: $form-grey;
+      border-width: 2px;
+    }
+  }
+
+  label {
+    color: $form-grey;
+  }
+
+  .inventory-label {
+    text-align: center;
+    display: block;
+    font-size: 22px;
+    margin: 0;
+  }
+  
+  & > .MuiGrid-container {
+    & > .MuiGrid-item {
+      margin-bottom: 20px;
+    }
+  }
+
+  .MuiInputBase-root {
+    &:before,
+    &:after {
+      border-color: $form-grey !important;
+    }
+  }
+
+  .MuiSvgIcon-root {
+    fill: $form-grey;
+  }
+
+  .item-icon {
+    width: 50px;
+  }
+
+  .inventory {
+    margin: 20px 0;
+
+    .item {
+      text-align: center;
+
+      img {
+        margin: 0 0 10px;
+      }
+
+      .field-holder {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        input {
+          width: 100%;
+          text-align: center;
+          border-radius: 5px;
+          padding: 5px;
+        }
+      }
+    }
+  }
+
+  [data-component='map'] {
+    margin: 0 0 40px;
+  }
+  
+}

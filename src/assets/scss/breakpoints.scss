@@ -1,0 +1,43 @@
+/* 
+  Material UI breakpoints
+*/
+
+@mixin xs {
+  @media (min-width: 0) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (min-width: 600px) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (min-width: 960px) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (min-width: 1920px) {
+    @content;
+  }
+}
+
+/*
+  Custom breakpoints
+*/
+
+/* @mixin desktop-small {
+  @media (min-width: 1024px) {
+    @content;
+  }
+} */

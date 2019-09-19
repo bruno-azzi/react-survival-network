@@ -1,0 +1,96 @@
+@import '../assets/scss/imports.scss';
+
+main {
+
+  li {
+    display: block;
+    width: 100%;
+  } 
+
+  .nav {
+    position: absolute;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background: #7744ff;
+    padding: 50px 20px;
+    z-index: 999;
+
+    @include lg {
+      background: red;
+    }
+
+    ul {
+      padding: 0;
+      margin: 0;
+
+      li {
+        color: #fff;
+        font-weight: 600;
+
+        &:not(:last-child) {
+          margin: 0 0 20px;
+        }
+      }
+    }
+
+    .close-nav {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      width: 20px;
+      height: 20px;
+      font-size: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+  }
+
+  .survivors-column {
+    border-radius: 5px;
+    border: 1px solid $blue-light;
+    box-shadow: $shadow;
+  }
+
+  .block {
+    border-radius: 5px;
+    background: $blue-light;
+    box-shadow: $shadow;
+    padding: 20px 25px;
+  }
+
+  .column-title {
+    background: $blue-light;
+    border-radius: 5px 5px 0 0;
+    padding: 12px 15px;
+
+    .title {
+      font-weight: 400;
+      text-transform: uppercase;
+      margin: 0;
+    }
+  }
+
+  .add-btn {
+    cursor: pointer;
+    width: auto;
+    padding: 0;
+    min-width: auto;
+    border-radius: 50%;
+    padding: 3px;
+
+    .add-btn-icon {
+      width: 25px;
+      height: 25px;
+
+      path {
+        fill: $white;
+      }
+    }
+  }
+
+}
+  

@@ -1,0 +1,8 @@
+@import '../../../assets/scss/imports.scss';
+
+[data-component='map'] {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  box-shadow: $shadow;
+}

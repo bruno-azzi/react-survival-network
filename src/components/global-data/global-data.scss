@@ -1,0 +1,27 @@
+@import '../../assets/scss/imports.scss';
+
+[data-component='global-data'] {
+
+  .item-data {
+    background: #1e1e2f;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    strong {
+      display: block;
+      font-weight: 400;
+      color: $red
+    }
+
+    &.green {
+      strong {
+        color: $green;
+      }
+    }
+  }
+}
