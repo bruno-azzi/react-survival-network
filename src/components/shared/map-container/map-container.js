@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
 
-import mapApiKey from '../../../map-api-key';
+import config from '../../../config';
 import darkTheme from './dark-theme.json';
 import './map-container.scss';
 
@@ -55,5 +55,5 @@ function MapContainer(props) {
 }
 
 export default GoogleApiWrapper({
-  apiKey: mapApiKey
+  apiKey: config.mapApiKey
 })(MapContainer);

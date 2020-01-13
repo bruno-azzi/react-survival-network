@@ -5,7 +5,7 @@ import RemoveIcon from '@material-ui/icons/Remove';
 import AddRoundedIcon from '@material-ui/icons/AddRounded';
 
 import Axios from 'axios';
-import apiUrl from '../../environment';
+import config from '../../config';
 
 import './add-survivor-form.scss';
 import MapContainer from '../shared/map-container/map-container';
@@ -61,7 +61,7 @@ export default function AddSurvivorForm(props) {
 
     console.log('form:', payload);
 
-    const response = await Axios.post(apiUrl + 'people.json', payload);
+    const response = await Axios.post(config.api + 'people.json', payload);
     const newSurvivor = response.data;
 
     console.log('newSurvivor', newSurvivor);
@@ -120,25 +120,22 @@ export default function AddSurvivorForm(props) {
 
   const handleItemAmount = (itemName, itemAmount) => {
     console.log(itemName, itemAmount);
+    switch (itemName) {
+      case 'water':
+        setWater(itemAmount);
+        break;
 
-    if (itemAmount >= 0 && itemAmount <= 99) {
-      switch (itemName) {
-        case 'water':
-          setWater(itemAmount);
-          break;
-  
-        case 'food':
-          setFood(itemAmount);
-          break;
-  
-        case 'ammo':
-          setAmmo(itemAmount);
-          break;
-  
-        default:
-          setMedication(itemAmount);
-          break;
-      }
+      case 'food':
+        setFood(itemAmount);
+        break;
+
+      case 'ammo':
+        setAmmo(itemAmount);
+        break;
+
+      default:
+        setMedication(itemAmount);
+        break;
     }
   };
 

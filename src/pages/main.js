@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 import axios from 'axios';
-import apiUrl from '../environment';
+import config from '../config';
 
 import { Container, Grid, Button } from '@material-ui/core';
 import AddCircleOutlineOutlinedIcon from '@material-ui/icons/AddCircleOutlineOutlined';
@@ -19,7 +19,7 @@ export default function Main() {
 
   useEffect(() => {
     async function loadSurvs() {
-      const response = await axios.get(apiUrl + 'people.json');
+      const response = await axios.get(config.api + 'people.json');
 
       setSurvivors(response.data.reverse());
       console.log('load survivors');
@@ -67,7 +67,7 @@ export default function Main() {
 
           <Grid item xs={8}>
             <div className="block">
-              {/* <GlobalData /> */}
+              <GlobalData />
               {
                 showForm && (
                   <AddSurvivorForm onCreateNewSurvivor={updateSurvivorList} />
